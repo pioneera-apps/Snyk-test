@@ -1,12 +1,12 @@
 import { processLargeArray } from "../app";
 
 // Mock the processBatch function
-jest.mock('../src/app.ts', () => ({
+jest.mock('../app.ts', () => ({
   processBatch: jest.fn()
 }));
 
 describe('processLargeArray', () => {
-  const mockProcessBatch = require("../src/app").processBatch;
+  const mockProcessBatch = require("../app").processBatch;
 
   beforeEach(() => {
     mockProcessBatch.mockClear();
